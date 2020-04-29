@@ -12,6 +12,10 @@ npm i -g @vue/cli
 ```shell
 vue create
 ```
+## bootstrap Install
+```shell
+npm install vue bootstrap-vue bootstrap
+```
 ## axios Install
 ```shell
 npm install --save axios
