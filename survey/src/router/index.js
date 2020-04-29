@@ -1,29 +1,17 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import BoardList from "../components/board/BoardList.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter); // 뷰 어플리케이션에 라우터 플러그인을 추가한다.
 
-  const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
-
-const router = new VueRouter({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes
-})
-
-export default router
+// 라우터 객체를 생성
+export default new VueRouter({
+  mode: "history",
+  routes: [
+    {
+      path: "/",
+      name: "BoardList",
+      component: BoardList
+    }
+  ]
+});
